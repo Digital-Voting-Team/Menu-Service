@@ -2,8 +2,8 @@ package receipt
 
 type Receipt struct {
 	Id           int
-	MealId       int `db:"meal_id"`
-	IngredientId int `db:"ingredient_id"`
+	MealId       int `db:"meal"`
+	IngredientId int `db:"ingredient"`
 	Quantity     int
 }
 

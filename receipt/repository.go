@@ -81,7 +81,7 @@ func (repo *Repository) Select() ([]Receipt, error) {
 	}
 
 	receipt := Receipt{}
-	receiptArray := []Receipt{}
+	var receiptArray []Receipt
 	for rows.Next() {
 		err = rows.StructScan(&receipt)
 		if err != nil {

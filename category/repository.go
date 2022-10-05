@@ -75,7 +75,7 @@ func (repo *Repository) Select() ([]Category, error) {
 	}
 
 	category := Category{}
-	categoryArray := []Category{}
+	var categoryArray []Category
 	for rows.Next() {
 		err = rows.StructScan(&category)
 		if err != nil {

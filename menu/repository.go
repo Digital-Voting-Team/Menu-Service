@@ -74,7 +74,7 @@ func (repo *Repository) Select() ([]Menu, error) {
 	}
 
 	menu := Menu{}
-	menuArray := []Menu{}
+	var menuArray []Menu
 	for rows.Next() {
 		err = rows.StructScan(&menu)
 		if err != nil {

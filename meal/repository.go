@@ -87,7 +87,7 @@ func (repo *Repository) Select() ([]Meal, error) {
 	}
 
 	meal := Meal{}
-	mealArray := []Meal{}
+	var mealArray []Meal
 	for rows.Next() {
 		err = rows.StructScan(&meal)
 		if err != nil {

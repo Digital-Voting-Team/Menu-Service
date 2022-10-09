@@ -64,7 +64,7 @@ func (repo *Repository) Insert(mealMenu *MealMenu) (int, error) {
 
 	rows.Next()
 	err = rows.Scan(&id)
-	return id, nil
+	return id, err
 }
 
 func (repo *Repository) CreateTable() error {

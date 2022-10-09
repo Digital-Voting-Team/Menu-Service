@@ -3,6 +3,7 @@ package main
 import (
 	"Menu-Service/category"
 	"Menu-Service/meal"
+	"Menu-Service/meal_menu"
 	"Menu-Service/menu"
 	"Menu-Service/receipt"
 	"Menu-Service/utils"
@@ -76,4 +77,34 @@ func ReceiptsSimulation(db *sqlx.DB) {
 		log.Fatal(err)
 	}
 	log.Printf("\nreceipts: %+v", array)
+}
+
+func MealMenuSimulation(db *sqlx.DB) {
+	repo := meal_menu.NewRepository(db)
+	newEntity := utils.GenerateMockMealMenu()
+
+	id, err := repo.Insert(newEntity)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("id of the added meal-menu: %d", id)
+
+	array, err := repo.Select()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("\nmeal-menus: %+v", array)
+}
+
+func Clean(db *sqlx.DB) {
+	meal_menu.NewRepository(db).Clean()
+	meal_menu.NewRepository(db).ResetCounter()
+	receipt.NewRepository(db).Clean()
+	receipt.NewRepository(db).ResetCounter()
+	meal.NewRepository(db).Clean()
+	meal.NewRepository(db).ResetCounter()
+	menu.NewRepository(db).Clean()
+	menu.NewRepository(db).ResetCounter()
+	category.NewRepository(db).Clean()
+	category.NewRepository(db).ResetCounter()
 }

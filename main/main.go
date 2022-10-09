@@ -22,4 +22,7 @@ func main() {
 	MenusSimulation(db)
 	MealsSimulation(db)
 	ReceiptsSimulation(db)
+	MealMenuSimulation(db)
+
+	Clean(db)
 }

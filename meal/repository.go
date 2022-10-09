@@ -18,10 +18,6 @@ var (
 		CONSTRAINT categories FOREIGN KEY (category_id)
 			REFERENCES public.categories (id) MATCH SIMPLE
 			ON UPDATE NO ACTION
-			ON DELETE NO ACTION,
-		CONSTRAINT menu FOREIGN KEY (menu_id)
-			REFERENCES public.menu (id) MATCH SIMPLE
-			ON UPDATE NO ACTION
 			ON DELETE NO ACTION
 	)
 	
@@ -33,19 +29,21 @@ var (
 	queryDeleteTable = `DROP TABLE public.meals`
 
 	queryInsert = `INSERT INTO public.meals(
-	position_name, category, price, amount, menu)
-	VALUES ($1, $2, $3, $4, $5) RETURNING id;`
+	position_name, category, price, amount)
+	VALUES ($1, $2, $3, $4) RETURNING id;`
 
 	querySelect = `SELECT * FROM public.meals;`
 
 	queryUpdate = `UPDATE public.meals
-	SET position_name=$2, category=$3, price=$4, amount=$5, menu=$6
+	SET position_name=$2, category=$3, price=$4, amount=$5
 	WHERE id=$1;`
 
 	queryDelete = `DELETE FROM public.meals
 	WHERE id=$1;`
 
 	queryCleanDb = `DELETE FROM public.meals;`
+
+	queryResetCounter = `alter sequence meals_id_seq restart with 1`
 )
 
 type Repository struct {
@@ -57,7 +55,7 @@ func NewRepository(db *sqlx.DB) *Repository {
 }
 
 func (repo *Repository) Insert(meal *Meal) (int, error) {
-	rows, err := repo.db.Queryx(queryInsert, meal.MealName, meal.CategoryId, meal.Price, meal.Amount, meal.MenuId)
+	rows, err := repo.db.Queryx(queryInsert, meal.MealName, meal.CategoryId, meal.Price, meal.Amount)
 	defer rows.Close()
 	id := -1
 	if err != nil {
@@ -104,11 +102,16 @@ func (repo *Repository) Delete(id int) error {
 }
 
 func (repo *Repository) Update(id int, meal *Meal) error {
-	_, err := repo.db.Queryx(queryUpdate, id, meal.MealName, meal.CategoryId, meal.Price, meal.Amount, meal.MenuId)
+	_, err := repo.db.Queryx(queryUpdate, id, meal.MealName, meal.CategoryId, meal.Price, meal.Amount)
 	return err
 }
 
 func (repo *Repository) Clean() error {
 	_, err := repo.db.Exec(queryCleanDb)
+	return err
+}
+
+func (repo *Repository) ResetCounter() error {
+	_, err := repo.db.Exec(queryResetCounter)
 	return err
 }

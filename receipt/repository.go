@@ -40,6 +40,8 @@ var (
 	WHERE id=$1;`
 
 	queryCleanDb = `DELETE FROM public.receipt;`
+
+	queryResetCounter = `alter sequence receipt_id_seq restart with 1`
 )
 
 type Repository struct {
@@ -104,5 +106,10 @@ func (repo *Repository) Update(id int, receipt *Receipt) error {
 
 func (repo *Repository) Clean() error {
 	_, err := repo.db.Exec(queryCleanDb)
+	return err
+}
+
+func (repo *Repository) ResetCounter() error {
+	_, err := repo.db.Exec(queryResetCounter)
 	return err
 }

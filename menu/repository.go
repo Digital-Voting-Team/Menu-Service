@@ -33,6 +33,8 @@ var (
 	WHERE id=$1;`
 
 	queryCleanDb = `DELETE FROM public.menu;`
+
+	queryResetCounter = `alter sequence menu_id_seq restart with 1`
 )
 
 type Repository struct {
@@ -97,5 +99,10 @@ func (repo *Repository) Update(id int, menu *Menu) error {
 
 func (repo *Repository) Clean() error {
 	_, err := repo.db.Exec(queryCleanDb)
+	return err
+}
+
+func (repo *Repository) ResetCounter() error {
+	_, err := repo.db.Exec(queryResetCounter)
 	return err
 }

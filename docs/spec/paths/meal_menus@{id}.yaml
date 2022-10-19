@@ -1,0 +1,110 @@
+parameters:
+  - name: id
+    in: path
+    description: 'MealMenu identifier'
+    required: true
+    schema:
+      type: string
+      format: int64
+
+get:
+  tags:
+    - MealMenu
+  summary: Get MealMenu
+  description: 'Get MealMenu by id'
+  operationId: getMealMenu
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/MealMenu'
+              included:
+                type: array
+                items:
+                  type: object
+                  allOf:
+                    - $ref: '#/components/schemas/Meal'
+                    - $ref: '#/components/schemas/Menu'
+    '400':
+      description: Invalid request
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '404':
+      description: MealMenu not found
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get MealMenu
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+put:
+  tags:
+    - MealMenu
+  summary: Update MealMenu
+  description: 'Update MealMenu by id'
+  operationId: updateMealMenu
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/MealMenu'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/MealMenu'
+    '404':
+      description: Invalid MealMenu id
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get MealMenu or failed to mark MealMenu deleted
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+
+delete:
+  tags:
+    - MealMenu
+  summary: Delete MealMenu
+  description: 'Delete MealMenu by id'
+  operationId: deleteMealMenu
+  responses:
+    '204':
+      description: MealMenu deleted
+    '404':
+      description: Invalid MealMenu id
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get MealMenu or failed to mark MealMenu deleted
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'

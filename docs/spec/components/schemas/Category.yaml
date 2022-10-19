@@ -1,0 +1,18 @@
+allOf:
+  - $ref: '#/components/schemas/CategoryKey'
+  - type: object
+    required:
+      - attributes
+    properties:
+      attributes:
+        type: object
+        required:
+          - category_name
+          - unit
+        properties:
+          category_name:
+            type: string
+            example: "Перші страви"
+          unit:
+            type: string
+            example: "мл"

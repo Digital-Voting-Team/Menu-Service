@@ -1,0 +1,37 @@
+allOf:
+  - $ref: '#/components/schemas/MealKey'
+  - type: object
+    required:
+      - attributes
+      - relationships
+    properties:
+      relationships:
+        type: object
+        required:
+          - category
+        properties:
+          category:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: '#/components/schemas/CategoryKey'
+      attributes:
+        type: object
+        required:
+          - meal_name
+          - price
+          - amount
+        properties:
+          meal_name:
+            type: string
+            example: "Борщ"
+          price:
+            type: string
+            format: float64
+            example: "30.00"
+          amount:
+            type: string
+            format: float64
+            example: "500.0"

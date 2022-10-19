@@ -1,0 +1,105 @@
+parameters:
+  - name: id
+    in: path
+    description: 'Receipt identifier'
+    required: true
+    schema:
+      type: string
+      format: int64
+
+get:
+  tags:
+    - Receipt
+  summary: Get Receipt
+  description: 'Get Receipt by id'
+  operationId: getReceipt
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/Receipt'
+              included:
+                $ref: '#/components/schemas/Meal'
+    '400':
+      description: Invalid request
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '404':
+      description: Receipt not found
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get Receipt
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+put:
+  tags:
+    - Receipt
+  summary: Update Receipt
+  description: 'Update Receipt by id'
+  operationId: updateReceipt
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/Receipt'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/Receipt'
+    '404':
+      description: Invalid Receipt id
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get Receipt or failed to mark Receipt deleted
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+
+delete:
+  tags:
+    - Receipt
+  summary: Delete Receipt
+  description: 'Delete Receipt by id'
+  operationId: deleteReceipt
+  responses:
+    '204':
+      description: Receipt deleted
+    '404':
+      description: Invalid Receipt id
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to get Receipt or failed to mark Receipt deleted
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'

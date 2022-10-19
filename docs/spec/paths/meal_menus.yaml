@@ -1,0 +1,79 @@
+post:
+  tags:
+    - MealMenu
+  summary: Create MealMenu
+  operationId: createMealMenu
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - data
+          properties:
+            data:
+              $ref: '#/components/schemas/MealMenu'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/MealMenu'
+    '401':
+      description: MealMenu creation is not allowed
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to process request
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+
+get:
+  tags:
+    - MealMenu
+  summary: Get MealMenu list
+  operationId: getMealMenuList
+  parameters:
+    - $ref: '#/components/parameters/pageNumberParam'
+    - $ref: '#/components/parameters/pageLimitParam'
+    - $ref: '#/components/parameters/sortingParam'
+    - name: 'filter[meal_id]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+    - name: 'filter[menu_id]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MealMenu'
+              included:
+                type: array
+                items:
+                  type: object
+                  allOf:
+                    - $ref: '#/components/schemas/Meal'
+                    - $ref: '#/components/schemas/Menu'

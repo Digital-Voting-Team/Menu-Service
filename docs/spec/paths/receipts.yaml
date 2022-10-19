@@ -1,0 +1,88 @@
+post:
+  tags:
+    - Receipt
+  summary: Create Receipt
+  operationId: createReceipt
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - data
+          properties:
+            data:
+              $ref: '#/components/schemas/Receipt'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/Receipt'
+    '401':
+      description: Receipt creation is not allowed
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    '500':
+      description: Failed to process request
+      content:
+        application/vnd.api+json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+
+
+get:
+  tags:
+    - Receipt
+  summary: Get Receipt list
+  operationId: getReceiptList
+  parameters:
+    - $ref: '#/components/parameters/pageNumberParam'
+    - $ref: '#/components/parameters/pageLimitParam'
+    - $ref: '#/components/parameters/sortingParam'
+    - name: 'filter[quantity_from]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+    - name: 'filter[quantity_to]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+    - name: 'filter[meal_id]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+    - name: 'filter[ingredient_id]'
+      in: query
+      required: false
+      schema:
+        type: string
+        format: int64
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Receipt'
+              included:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Meal'

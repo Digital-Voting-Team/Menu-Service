@@ -13,4 +13,10 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+.yarn
+.vscode/
+.idea/
+config.*.yaml
+docs/node_modules
+docs/web_deploy
+vendor

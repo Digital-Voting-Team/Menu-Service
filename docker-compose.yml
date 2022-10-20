@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  cafe-service:
+  menu-service:
     restart: unless-stopped
     build: .
     ports:

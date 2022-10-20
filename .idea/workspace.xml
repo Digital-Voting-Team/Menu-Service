@@ -5,105 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Implemented API, generated code and db access part">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.yarnrc.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/parameters/pageLimitParam.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/parameters/pageNumberParam.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/parameters/sortingParam.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/CafeKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Category.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/CategoryKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Errors.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/IngredientKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Meal.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/MealKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/MealMenu.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/MealMenuKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Menu.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/MenuKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Receipt.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/ReceiptKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/components/schemas/ReceiptMealKey.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/openapi.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/categories.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/categories@{id}.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/meal_menus.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/meal_menus@{id}.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/meals.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/meals@{id}.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/menus.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/menus@{id}.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/receipts.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/spec/paths/receipts@{id}.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/web/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/web/index.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/web/redoc-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/assets/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/assets/migrations/001_initial.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cli/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/cli/migrate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/config/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/meal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/meal_menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/pg/category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/pg/meal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/pg/meal_menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/pg/menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/pg/receipt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/data/receipt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/flag.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/included.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_category_attributes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_details.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_key.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_links.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_meal.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_meal_attributes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_meal_menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_meal_menu_relationships.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_meal_relationships.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_menu_relationships.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_receipt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_receipt_attributes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_receipt_relationships.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_relation_collection.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/model_resource_type.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Menu-Service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Menu-Service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/category.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/simulations.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meal/meal.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meal/repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meal_menu/meal_menu.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meal_menu/repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/menu.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/receipt/receipt.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/receipt/repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/mock_data.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/random_string.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,28 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "E:/Projects/University/CSCA/Menu-Service",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.file": "E:/Projects/University/CSCA/Menu-Service/docs/spec/components/schemas/MealKey.yaml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/University/CSCA/Menu-Service&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;E:/Projects/University/CSCA/Menu-Service/docs/spec/components/schemas/MealKey.yaml&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\University\CSCA\Menu-Service" />
@@ -173,7 +76,16 @@
       <recent name="E:\Projects\University\CSCA\Menu-Service\legacy" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build Menu-Service/main">
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="go build Menu-Service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Menu-Service" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="Menu-Service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build Menu-Service/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Menu-Service" />
       <working_directory value="$PROJECT_DIR$" />
@@ -192,8 +104,27 @@
       <filePath value="$PROJECT_DIR$/category/repository.go" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Go Build.go build Menu-Service" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Go Build.go build Menu-Service/main" />
         <item itemvalue="Go Build.go build repository.go" />
       </list>
@@ -209,7 +140,8 @@
       <updated>1665339193537</updated>
       <workItem from="1665339200089" duration="95000" />
       <workItem from="1665339464612" duration="1928000" />
-      <workItem from="1666187840096" duration="23179000" />
+      <workItem from="1666187840096" duration="23388000" />
+      <workItem from="1666251885116" duration="15099000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed errors">
       <created>1665341388697</created>
@@ -218,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665341388697</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented API, generated code and db access part">
+      <created>1666219702737</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666219702737</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

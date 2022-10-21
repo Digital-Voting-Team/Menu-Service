@@ -29,6 +29,6 @@ func (r *CreateCategoryRequest) validate() error {
 		"/data/attributes/category_name": validation.Validate(&r.Data.Attributes.CategoryName, validation.Required,
 			validation.Length(3, 45)),
 		"/data/attributes/unit": validation.Validate(&r.Data.Attributes.Unit, validation.Required,
-			validation.Length(3, 45)),
+			validation.Length(1, 10)),
 	}).Filter()
 }

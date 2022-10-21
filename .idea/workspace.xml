@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Implemented API, generated code and db access part">
+    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Implemented requests and handlers, service is ready, needs to be tested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/assets/migrations/001_initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/internal/assets/migrations/001_initial.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/category/create_category.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/category/create_category.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/category/update_category.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/category/update_category.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +79,11 @@
       <recent name="E:\Projects\University\CSCA\Menu-Service\legacy" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="go build Menu-Service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Menu-Service" />
       <working_directory value="$PROJECT_DIR$" />
+      <parameters value="run service" />
       <kind value="PACKAGE" />
       <package value="Menu-Service" />
       <directory value="$PROJECT_DIR$" />
@@ -120,11 +124,18 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Go Build.go build Menu-Service" />
+      <item itemvalue="Go Build.go build Menu-Service/main" />
+      <item itemvalue="Go Build.go build repository.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Go Build.go build Menu-Service" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Go Build.go build Menu-Service" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Go Build.go build Menu-Service/main" />
         <item itemvalue="Go Build.go build repository.go" />
       </list>
@@ -141,7 +152,9 @@
       <workItem from="1665339200089" duration="95000" />
       <workItem from="1665339464612" duration="1928000" />
       <workItem from="1666187840096" duration="23388000" />
-      <workItem from="1666251885116" duration="15099000" />
+      <workItem from="1666251885116" duration="15250000" />
+      <workItem from="1666336982910" duration="519000" />
+      <workItem from="1666358521469" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed errors">
       <created>1665341388697</created>
@@ -157,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666219702737</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented requests and handlers, service is ready, needs to be tested">
+      <created>1666305112663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666305112663</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +197,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed errors" />
     <MESSAGE value="Implemented API, generated code and db access part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented API, generated code and db access part" />
+    <MESSAGE value="Implemented requests and handlers, service is ready, needs to be tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented requests and handlers, service is ready, needs to be tested" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -10,12 +10,12 @@ import (
 	"github.com/fatih/structs"
 )
 
-const mealMenusTableName = "public.mealMenus"
+const mealMenusTableName = "public.meal_menus"
 
 func NewMealMenusQ(db *pgdb.DB) data.MealMenusQ {
 	return &mealMenusQ{
 		db:        db.Clone(),
-		sql:       sq.Select("mealMenus.*").From(mealMenusTableName),
+		sql:       sq.Select("meal_menus.*").From(mealMenusTableName),
 		sqlUpdate: sq.Update(mealMenusTableName).Suffix("returning *"),
 	}
 }

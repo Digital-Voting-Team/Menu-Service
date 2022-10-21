@@ -12,12 +12,13 @@ allOf:
           - ingredient
         properties:
           meal:
+            description: "Receipt meal fKey"
             type: object
             required:
               - data
             properties:
               data:
-                $ref: '#/components/schemas/ReceiptMealKey'
+                $ref: '#/components/schemas/MealKey'
           ingredient:
             type: object
             required:

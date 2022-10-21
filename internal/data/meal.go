@@ -31,5 +31,5 @@ type Meal struct {
 	MealName   string  `db:"meal_name" structs:"meal_name"`
 	CategoryId int64   `db:"category_id" structs:"category_id"`
 	Price      float64 `db:"price" structs:"price"`
-	Amount     float64 `db:"price" structs:"price"`
+	Amount     float64 `db:"amount" structs:"amount"`
 }

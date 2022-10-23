@@ -10,8 +10,8 @@ type ReceiptsQ interface {
 
 	Transaction(fn func(q ReceiptsQ) error) error
 
-	Insert(address Receipt) (Receipt, error)
-	Update(address Receipt) (Receipt, error)
+	Insert(receipt Receipt) (Receipt, error)
+	Update(receipt Receipt) (Receipt, error)
 	Delete(id int64) error
 
 	Page(pageParams pgdb.OffsetPageParams) ReceiptsQ

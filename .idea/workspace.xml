@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Fixed unit field validation in category, naming in meals">
+    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Working version of the Menu-Service, tested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spec/components/schemas/MealMenu.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spec/components/schemas/MealMenu.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spec/components/schemas/Receipt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/spec/components/schemas/Receipt.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/spec/components/schemas/ReceiptMealKey.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/data/meal.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/data/meal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/data/pg/meal_menu.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/data/pg/meal_menu.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/included.go" beforeDir="false" afterPath="$PROJECT_DIR$/resources/included.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/model_details.go" beforeDir="false" afterPath="$PROJECT_DIR$/resources/model_details.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.vendoring.notification.had.been.shown": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "E:/Projects/University/CSCA/Menu-Service",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.file": "E:/Projects/University/CSCA/Menu-Service/docs/spec/components/schemas/MealKey.yaml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.vendoring.notification.had.been.shown&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/University/CSCA/Menu-Service&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;E:/Projects/University/CSCA/Menu-Service/docs/spec/components/schemas/MealKey.yaml&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\University\CSCA\Menu-Service" />
@@ -85,14 +77,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="Menu-Service" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build Menu-Service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Menu-Service" />
       <working_directory value="$PROJECT_DIR$" />
@@ -119,15 +103,6 @@
       <package value="Menu-Service" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/category/repository.go" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="Menu-Service" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -177,7 +152,8 @@
       <workItem from="1666251885116" duration="15250000" />
       <workItem from="1666336982910" duration="519000" />
       <workItem from="1666358521469" duration="2660000" />
-      <workItem from="1666377718581" duration="3377000" />
+      <workItem from="1666377718581" duration="3546000" />
+      <workItem from="1666391295196" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed errors">
       <created>1665341388697</created>
@@ -207,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666361610620</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Working version of the Menu-Service, tested">
+      <created>1666391065512</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666391065512</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +212,8 @@
     <MESSAGE value="Implemented API, generated code and db access part" />
     <MESSAGE value="Implemented requests and handlers, service is ready, needs to be tested" />
     <MESSAGE value="Fixed unit field validation in category, naming in meals" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed unit field validation in category, naming in meals" />
+    <MESSAGE value="Working version of the Menu-Service, tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working version of the Menu-Service, tested" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

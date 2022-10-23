@@ -10,8 +10,8 @@ type CategoriesQ interface {
 
 	Transaction(fn func(q CategoriesQ) error) error
 
-	Insert(address Category) (Category, error)
-	Update(address Category) (Category, error)
+	Insert(category Category) (Category, error)
+	Update(category Category) (Category, error)
 	Delete(id int64) error
 
 	Page(pageParams pgdb.OffsetPageParams) CategoriesQ

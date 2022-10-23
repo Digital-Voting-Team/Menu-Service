@@ -10,8 +10,8 @@ type MealMenusQ interface {
 
 	Transaction(fn func(q MealMenusQ) error) error
 
-	Insert(address MealMenu) (MealMenu, error)
-	Update(address MealMenu) (MealMenu, error)
+	Insert(mealMenu MealMenu) (MealMenu, error)
+	Update(mealMenu MealMenu) (MealMenu, error)
 	Delete(id int64) error
 
 	Page(pageParams pgdb.OffsetPageParams) MealMenusQ

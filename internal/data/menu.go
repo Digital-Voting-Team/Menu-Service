@@ -10,8 +10,8 @@ type MenusQ interface {
 
 	Transaction(fn func(q MenusQ) error) error
 
-	Insert(address Menu) (Menu, error)
-	Update(address Menu) (Menu, error)
+	Insert(menu Menu) (Menu, error)
+	Update(menu Menu) (Menu, error)
 	Delete(id int64) error
 
 	Page(pageParams pgdb.OffsetPageParams) MenusQ

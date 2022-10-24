@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Working version of the Menu-Service, tested">
+    <list default="true" id="79a8ab18-2d00-4eda-b2c6-4cb0cdbd6aec" name="Changes" comment="Fixed misnamed variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/data/meal.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/data/meal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/data/pg/meal.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/data/pg/meal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/handlers/meal/get_meal_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/handlers/meal/get_meal_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/handlers/meal_menu/get_meal_menu_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/handlers/meal_menu/get_meal_menu_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/handlers/menu/get_menu_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/handlers/menu/get_menu_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/handlers/receipt/get_receipt_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/handlers/receipt/get_receipt_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/meal/get_meal_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/meal/get_meal_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/meal_menu/get_meal_menu_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/meal_menu/get_meal_menu_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/menu/get_menu_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/menu/get_menu_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/requests/receipt/get_receipt_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/requests/receipt/get_receipt_list.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +164,8 @@
       <workItem from="1666358521469" duration="2660000" />
       <workItem from="1666377718581" duration="3546000" />
       <workItem from="1666391295196" duration="46000" />
+      <workItem from="1666538366933" duration="275000" />
+      <workItem from="1666641583228" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed errors">
       <created>1665341388697</created>
@@ -190,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666391065512</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed misnamed variables">
+      <created>1666538605004</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666538605004</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +232,8 @@
     <MESSAGE value="Implemented requests and handlers, service is ready, needs to be tested" />
     <MESSAGE value="Fixed unit field validation in category, naming in meals" />
     <MESSAGE value="Working version of the Menu-Service, tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working version of the Menu-Service, tested" />
+    <MESSAGE value="Fixed misnamed variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed misnamed variables" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

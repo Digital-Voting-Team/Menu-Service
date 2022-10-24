@@ -40,6 +40,14 @@ func GetMealMenuList(w http.ResponseWriter, r *http.Request) {
 
 func applyFilters(q data.MealMenusQ, request requests.GetMealMenuListRequest) {
 	q.Page(request.OffsetPageParams)
+
+	if len(request.FilterMealId) > 0 {
+		q.FilterByMealId(request.FilterMealId...)
+	}
+
+	if len(request.FilterMenuId) > 0 {
+		q.FilterByMealId(request.FilterMenuId...)
+	}
 }
 
 func newMealMenusList(mealMenus []data.MealMenu) []resources.MealMenu {

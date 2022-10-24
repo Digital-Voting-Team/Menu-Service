@@ -39,6 +39,22 @@ func GetReceiptList(w http.ResponseWriter, r *http.Request) {
 
 func applyFilters(q data.ReceiptsQ, request requests.GetReceiptListRequest) {
 	q.Page(request.OffsetPageParams)
+
+	if len(request.FilterMealId) > 0 {
+		q.FilterByMealId(request.FilterMealId...)
+	}
+
+	if len(request.FilterIngredientId) > 0 {
+		q.FilterByIngredientId(request.FilterIngredientId...)
+	}
+
+	if len(request.FilterQuantityFrom) > 0 {
+		q.FilterByQuantityFrom(request.FilterQuantityFrom...)
+	}
+
+	if len(request.FilterQuantityTo) > 0 {
+		q.FilterByQuantityTo(request.FilterQuantityTo...)
+	}
 }
 
 func newReceiptsList(receipts []data.Receipt) []resources.Receipt {

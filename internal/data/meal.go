@@ -21,7 +21,7 @@ type MealsQ interface {
 	FilterByPriceFrom(prices ...float64) MealsQ
 	FilterByPriceTo(prices ...float64) MealsQ
 	FilterByAmount(amounts ...float64) MealsQ
-	FilterByCategoryId(ids ...float64) MealsQ
+	FilterByCategoryId(ids ...int64) MealsQ
 
 	JoinCategory() MealsQ
 }

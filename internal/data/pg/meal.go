@@ -118,7 +118,7 @@ func (q *mealsQ) FilterByAmount(amounts ...float64) data.MealsQ {
 	return q
 }
 
-func (q *mealsQ) FilterByCategoryId(ids ...float64) data.MealsQ {
+func (q *mealsQ) FilterByCategoryId(ids ...int64) data.MealsQ {
 	q.sql = q.sql.Where(sq.Eq{"category_id": ids})
 	return q
 }

@@ -9,7 +9,11 @@ import (
 
 type GetMealListRequest struct {
 	pgdb.OffsetPageParams
-	FilterMealName []string `filter:"meal_name"`
+	FilterMealName   []string  `filter:"meal_name"`
+	FilterPriceFrom  []float64 `filter:"price_from"`
+	FilterPriceTo    []float64 `filter:"price_to"`
+	FilterAmount     []float64 `filter:"amount"`
+	FilterCategoryId []int64   `filter:"category_id"`
 }
 
 func NewGetMealListRequest(r *http.Request) (GetMealListRequest, error) {

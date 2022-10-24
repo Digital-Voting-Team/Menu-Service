@@ -9,6 +9,10 @@ import (
 
 type GetReceiptListRequest struct {
 	pgdb.OffsetPageParams
+	FilterMealId       []int64 `filter:"meal_id"`
+	FilterIngredientId []int64 `filter:"ingredient_id"`
+	FilterQuantityFrom []int64 `filter:"quantity_from"`
+	FilterQuantityTo   []int64 `filter:"quantity_to"`
 }
 
 func NewGetReceiptListRequest(r *http.Request) (GetReceiptListRequest, error) {

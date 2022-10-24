@@ -9,6 +9,8 @@ import (
 
 type GetMealMenuListRequest struct {
 	pgdb.OffsetPageParams
+	FilterMealId []int64 `filter:"meal_id"`
+	FilterMenuId []int64 `filter:"menu_id"`
 }
 
 func NewGetMealMenuListRequest(r *http.Request) (GetMealMenuListRequest, error) {

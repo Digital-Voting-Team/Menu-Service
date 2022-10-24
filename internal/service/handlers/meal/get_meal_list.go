@@ -43,6 +43,22 @@ func applyFilters(q data.MealsQ, request requests.GetMealListRequest) {
 	if len(request.FilterMealName) > 0 {
 		q.FilterByNames(request.FilterMealName...)
 	}
+
+	if len(request.FilterPriceFrom) > 0 {
+		q.FilterByPriceFrom(request.FilterPriceFrom...)
+	}
+
+	if len(request.FilterPriceTo) > 0 {
+		q.FilterByPriceTo(request.FilterPriceTo...)
+	}
+
+	if len(request.FilterAmount) > 0 {
+		q.FilterByAmount(request.FilterAmount...)
+	}
+
+	if len(request.FilterCategoryId) > 0 {
+		q.FilterByCategoryId(request.FilterCategoryId...)
+	}
 }
 
 func newMealsList(meals []data.Meal) []resources.Meal {

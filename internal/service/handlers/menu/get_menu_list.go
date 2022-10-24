@@ -37,6 +37,10 @@ func GetMenuList(w http.ResponseWriter, r *http.Request) {
 
 func applyFilters(q data.MenusQ, request requests.GetMenuListRequest) {
 	q.Page(request.OffsetPageParams)
+
+	if len(request.FilterCafeId) > 0 {
+		q.FilterByCafeId(request.FilterCafeId...)
+	}
 }
 
 func newMenusList(menus []data.Menu) []resources.Menu {

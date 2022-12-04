@@ -6,17 +6,17 @@ services:
     build: .
     ports:
       # localhost:docker
-      - "8100:9102"
+      - "9105:9105"
     depends_on:
-      - db
+      - menu-db
     environment:
       - KV_VIPER_FILE=/config.yaml
     volumes:
       - ./config.yaml:/config.yaml
-    entrypoint: sh -c "menu-service migrate up && menu-service run service"
+    entrypoint: sh -c "Menu-Service migrate up && Menu-Service run service"
 
 
-  db:
+  menu-db:
     image: postgres
     restart: always
     ports:

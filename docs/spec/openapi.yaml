@@ -6,3 +6,5 @@ info:
 servers:
   - url: 'https://api.demo.cafe-service'
     description: Menu-Service Developer Environment
+security:
+  - bearerAuth: []

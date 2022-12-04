@@ -7,6 +7,7 @@ import (
 	mealMenu "Menu-Service/internal/service/handlers/meal_menu"
 	menu "Menu-Service/internal/service/handlers/menu"
 	receipt "Menu-Service/internal/service/handlers/receipt"
+	"Menu-Service/internal/service/middleware"
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
 
@@ -30,8 +31,10 @@ func (s *service) router() chi.Router {
 			helpers.CtxMenusQ(pg.NewMenusQ(s.db)),
 			helpers.CtxMealMenusQ(pg.NewMealMenusQ(s.db)),
 		),
+		middleware.BasicAuth(s.endpoints),
 	)
 	r.Route("/integrations/Menu-Service", func(r chi.Router) {
+		r.Use(middleware.CheckManagerPosition())
 		r.Route("/categories", func(r chi.Router) {
 			r.Post("/", category.CreateCategory)
 			r.Get("/", category.GetCategoryList)

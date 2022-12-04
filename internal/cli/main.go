@@ -1,9 +1,9 @@
 package cli
 
 import (
-	"Menu-Service/internal/config"
-	"Menu-Service/internal/service"
 	"gitlab.com/distributed_lab/logan/v3"
+	"menu-service/internal/config"
+	"menu-service/internal/service"
 
 	"github.com/alecthomas/kingpin"
 	"gitlab.com/distributed_lab/kit/kv"

@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"Menu-Service/internal/service/helpers"
 	staffRes "github.com/Digital-Voting-Team/staff-service/resources"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
+	"menu-service/internal/service/helpers"
 
 	"net/http"
 )

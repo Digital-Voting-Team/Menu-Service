@@ -1,9 +1,9 @@
 package requests
 
 import (
-	"Menu-Service/internal/service/helpers"
-	"Menu-Service/resources"
 	"encoding/json"
+	"menu-service/internal/service/helpers"
+	"menu-service/resources"
 	"net/http"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"

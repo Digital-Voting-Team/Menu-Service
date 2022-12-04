@@ -1,8 +1,8 @@
 package helpers
 
 import (
-	"Menu-Service/internal/data"
 	"context"
+	"menu-service/internal/data"
 
 	"net/http"
 

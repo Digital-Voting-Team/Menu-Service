@@ -10,7 +10,7 @@ on:
 
 env:
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/Menu-Service
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/menu-service
 
 
 jobs:

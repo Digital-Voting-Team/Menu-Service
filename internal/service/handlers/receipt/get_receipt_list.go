@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"Menu-Service/internal/data"
-	"Menu-Service/internal/service/helpers"
-	requests "Menu-Service/internal/service/requests/receipt"
-	"Menu-Service/resources"
+	"menu-service/internal/data"
+	"menu-service/internal/service/helpers"
+	requests "menu-service/internal/service/requests/receipt"
+	"menu-service/resources"
 	"net/http"
 	"strconv"
 

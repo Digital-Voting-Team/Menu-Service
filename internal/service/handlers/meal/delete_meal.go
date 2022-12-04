@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"Menu-Service/internal/service/helpers"
-	requests "Menu-Service/internal/service/requests/meal"
+	"menu-service/internal/service/helpers"
+	requests "menu-service/internal/service/requests/meal"
 	"net/http"
 
 	"gitlab.com/distributed_lab/ape"

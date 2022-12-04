@@ -1,11 +1,11 @@
 package handlers
 
 import (
-	"Menu-Service/internal/data"
-	"Menu-Service/internal/service/helpers"
-	requests "Menu-Service/internal/service/requests/meal"
-	"Menu-Service/resources"
 	"github.com/spf13/cast"
+	"menu-service/internal/data"
+	"menu-service/internal/service/helpers"
+	requests "menu-service/internal/service/requests/meal"
+	"menu-service/resources"
 	"net/http"
 	"strconv"
 

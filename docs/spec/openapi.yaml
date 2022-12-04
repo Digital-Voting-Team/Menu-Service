@@ -1,10 +1,10 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Menu-Service
+  title: menu-service
   description: ''
 servers:
   - url: 'https://api.demo.cafe-service'
-    description: Menu-Service Developer Environment
+    description: menu-service Developer Environment
 security:
   - bearerAuth: []

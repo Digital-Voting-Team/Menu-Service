@@ -1,8 +1,8 @@
 package cli
 
 import (
-	"Menu-Service/internal/assets"
-	"Menu-Service/internal/config"
+	"menu-service/internal/assets"
+	"menu-service/internal/config"
 
 	migrate "github.com/rubenv/sql-migrate"
 	"gitlab.com/distributed_lab/logan/v3/errors"

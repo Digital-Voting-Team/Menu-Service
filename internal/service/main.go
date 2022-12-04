@@ -5,7 +5,7 @@ import (
 	"net"
 	"net/http"
 
-	"Menu-Service/internal/config"
+	"menu-service/internal/config"
 
 	"gitlab.com/distributed_lab/kit/copus/types"
 	"gitlab.com/distributed_lab/logan/v3"

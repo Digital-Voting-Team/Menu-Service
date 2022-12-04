@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"Menu-Service/resources"
+	"menu-service/resources"
 	"net/http"
 	"strconv"
 

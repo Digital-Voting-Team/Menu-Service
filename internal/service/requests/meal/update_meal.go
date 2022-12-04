@@ -1,11 +1,11 @@
 package requests
 
 import (
-	"Menu-Service/internal/service/helpers"
-	"Menu-Service/resources"
 	"encoding/json"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"gitlab.com/distributed_lab/logan/v3/errors"
+	"menu-service/internal/service/helpers"
+	"menu-service/resources"
 	"net/http"
 
 	"github.com/go-chi/chi"

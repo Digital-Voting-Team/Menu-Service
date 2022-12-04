@@ -1,23 +1,23 @@
 package service
 
 import (
-	"Menu-Service/internal/data/pg"
-	category "Menu-Service/internal/service/handlers/category"
-	meal "Menu-Service/internal/service/handlers/meal"
-	mealMenu "Menu-Service/internal/service/handlers/meal_menu"
-	menu "Menu-Service/internal/service/handlers/menu"
-	receipt "Menu-Service/internal/service/handlers/receipt"
-	"Menu-Service/internal/service/middleware"
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
+	"menu-service/internal/data/pg"
+	category "menu-service/internal/service/handlers/category"
+	meal "menu-service/internal/service/handlers/meal"
+	mealMenu "menu-service/internal/service/handlers/meal_menu"
+	menu "menu-service/internal/service/handlers/menu"
+	receipt "menu-service/internal/service/handlers/receipt"
+	"menu-service/internal/service/middleware"
 
-	"Menu-Service/internal/service/helpers"
+	"menu-service/internal/service/helpers"
 )
 
 func (s *service) router() chi.Router {
 	r := chi.NewRouter()
 	log := s.log.WithFields(map[string]interface{}{
-		"service": "Menu-Service",
+		"service": "menu-service",
 	})
 
 	r.Use(
@@ -33,7 +33,7 @@ func (s *service) router() chi.Router {
 		),
 		middleware.BasicAuth(s.endpoints),
 	)
-	r.Route("/integrations/Menu-Service", func(r chi.Router) {
+	r.Route("/integrations/menu-service", func(r chi.Router) {
 		r.Use(middleware.CheckManagerPosition())
 		r.Route("/categories", func(r chi.Router) {
 			r.Post("/", category.CreateCategory)

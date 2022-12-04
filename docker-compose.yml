@@ -13,7 +13,7 @@ services:
       - KV_VIPER_FILE=/config.yaml
     volumes:
       - ./config.yaml:/config.yaml
-    entrypoint: sh -c "Menu-Service migrate up && Menu-Service run service"
+    entrypoint: sh -c "menu-service migrate up && menu-service run service"
 
 
   menu-db:

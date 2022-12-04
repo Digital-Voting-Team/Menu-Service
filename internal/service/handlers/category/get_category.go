@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"Menu-Service/internal/service/helpers"
-	requests "Menu-Service/internal/service/requests/category"
-	"Menu-Service/resources"
+	"menu-service/internal/service/helpers"
+	requests "menu-service/internal/service/requests/category"
+	"menu-service/resources"
 	"net/http"
 
 	"gitlab.com/distributed_lab/ape"

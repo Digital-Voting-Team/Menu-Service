@@ -21,8 +21,20 @@ func CreateMenu(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	cafeId := cast.ToInt64(request.Data.Relationships.Cafe.Data.ID)
+	resultCafe, err := helpers.ValidateCafe(r.Header.Get("Authorization"), r.Context().Value("cafeEndpoint").(string), cafeId)
+	if err != nil {
+		helpers.Log(r).WithError(err).Error("failed to get cafe from DB")
+		ape.Render(w, problems.InternalError())
+		return
+	}
+	if resultCafe == nil {
+		ape.Render(w, problems.NotFound())
+		return
+	}
+
 	Menu := data.Menu{
-		CafeId: cast.ToInt64(request.Data.Relationships.Cafe.Data.ID),
+		CafeId: cast.ToInt64(resultCafe.Data.ID),
 	}
 
 	var resultMenu data.Menu

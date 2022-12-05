@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/Digital-Voting-Team/auth-service v1.2.4
-	github.com/Digital-Voting-Team/cafe-service v1.0.3
+	github.com/Digital-Voting-Team/cafe-service v1.0.4
 	github.com/Digital-Voting-Team/staff-service v1.0.9
 	github.com/Digital-Voting-Team/warehouse-service v1.0.0
 	github.com/Masterminds/squirrel v1.5.3

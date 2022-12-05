@@ -47,8 +47,8 @@ github.com/CloudyKit/fastprinter v0.0.0-20170127035650-74b38d55f37a/go.mod h1:EF
 github.com/CloudyKit/jet v2.1.3-0.20180809161101-62edd43e4f88+incompatible/go.mod h1:HPYO+50pSWkPoj9Q/eq0aRGByCL6ScRlUmiEX5Zgm+w=
 github.com/Digital-Voting-Team/auth-service v1.2.4 h1:jiT8jEcX7DUmITJCfzhXc4ZH1/fFrlcMzzBP2sDEIcY=
 github.com/Digital-Voting-Team/auth-service v1.2.4/go.mod h1:iXHXtGK5TlF2D8tXj1srjKUoKBl5sLnYFiXghGrXE/Q=
-github.com/Digital-Voting-Team/cafe-service v1.0.3 h1:DOEpMolqhGK25qYByJVrQyTp1h1WP//4ihNkQm/Kdws=
-github.com/Digital-Voting-Team/cafe-service v1.0.3/go.mod h1:ZcSl/chPuW2xYCZnbZbUauuMuTh70HhECi9ZjoyxoVc=
+github.com/Digital-Voting-Team/cafe-service v1.0.4 h1:TEFBFA/MQUXFpKmgsd/NgBkaPESVsX7eB1oqvEzbON0=
+github.com/Digital-Voting-Team/cafe-service v1.0.4/go.mod h1:ZcSl/chPuW2xYCZnbZbUauuMuTh70HhECi9ZjoyxoVc=
 github.com/Digital-Voting-Team/staff-service v1.0.9 h1:l7USIEu/1STT8GswWT5i1tF8OZMTqdX2WsJ0k/19gmE=
 github.com/Digital-Voting-Team/staff-service v1.0.9/go.mod h1:VjTqjC3xmdgPPbTg5WJAsmoS8051zCwWGzwXixZiLL8=
 github.com/Digital-Voting-Team/warehouse-service v1.0.0 h1:zrozqH81ql3iDxDvojE2dk9oP9Bk/KVb6ng53OYM4W4=

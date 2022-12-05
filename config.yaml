@@ -20,6 +20,14 @@ endpoints:
       entry_points:
         - "localhost:9102/jwt/user"
         - "staff-service:9102/jwt/user"
+    - service: "cafe-service"
+      entry_points:
+        - "localhost:9106/integrations/cafe-service/cafes/"
+        - "cafe-service:9106/integrations/cafe-service/cafes/"
+    - service: "warehouse-service"
+      entry_points:
+        - "localhost:9109/integrations/warehouse-service/ingredients/"
+        - "warehouse-service:9109/integrations/warehouse-service/ingredients/"
 
 
 listener:

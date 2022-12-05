@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"menu-service/internal/data"
-	"menu-service/internal/service/helpers"
-	requests "menu-service/internal/service/requests/receipt"
-	"menu-service/resources"
+	"github.com/Digital-Voting-Team/menu-service/internal/data"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
+	requests "github.com/Digital-Voting-Team/menu-service/internal/service/requests/receipt"
+	"github.com/Digital-Voting-Team/menu-service/resources"
 	"net/http"
 	"strconv"
 

@@ -2,8 +2,8 @@ package requests
 
 import (
 	"encoding/json"
-	"menu-service/internal/service/helpers"
-	"menu-service/resources"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
+	"github.com/Digital-Voting-Team/menu-service/resources"
 	"net/http"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"

@@ -3,12 +3,12 @@ package middleware
 import (
 	"context"
 	authEndoints "github.com/Digital-Voting-Team/auth-serivce/endpoints"
+	"github.com/Digital-Voting-Team/menu-service/internal/config"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
 	staffEndoints "github.com/Digital-Voting-Team/staff-service/endpoints"
 	"github.com/spf13/cast"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
-	"menu-service/internal/config"
-	"menu-service/internal/service/helpers"
 	"net/http"
 )
 

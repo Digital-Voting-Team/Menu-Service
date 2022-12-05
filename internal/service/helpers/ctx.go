@@ -2,7 +2,7 @@ package helpers
 
 import (
 	"context"
-	"menu-service/internal/data"
+	"github.com/Digital-Voting-Team/menu-service/internal/data"
 
 	"net/http"
 

@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"menu-service/internal/service/helpers"
 	requests "menu-service/internal/service/requests/menu"
 	"menu-service/resources"
@@ -29,6 +30,9 @@ func GetMenu(w http.ResponseWriter, r *http.Request) {
 		ape.Render(w, problems.NotFound())
 		return
 	}
+
+	resultCafe, err := helpers.ValidateCafe(r.Header.Get("Authorization"), r.Context().Value("cafeEndpoint").(string), resultMenu.CafeId)
+	fmt.Println(resultCafe)
 
 	result := resources.MenuResponse{
 		Data: resources.Menu{

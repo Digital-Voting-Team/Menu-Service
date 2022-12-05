@@ -1,9 +1,9 @@
 package cli
 
 import (
+	"github.com/Digital-Voting-Team/menu-service/internal/config"
+	"github.com/Digital-Voting-Team/menu-service/internal/service"
 	"gitlab.com/distributed_lab/logan/v3"
-	"menu-service/internal/config"
-	"menu-service/internal/service"
 
 	"github.com/alecthomas/kingpin"
 	"gitlab.com/distributed_lab/kit/kv"

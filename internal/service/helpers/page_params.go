@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"menu-service/resources"
+	"github.com/Digital-Voting-Team/menu-service/resources"
 	"net/http"
 	"strconv"
 

@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"menu-service/internal/cli"
+	"github.com/Digital-Voting-Team/menu-service/internal/cli"
 )
 
 func main() {

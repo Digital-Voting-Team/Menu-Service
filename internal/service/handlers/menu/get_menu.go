@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"menu-service/internal/service/helpers"
-	requests "menu-service/internal/service/requests/menu"
-	"menu-service/resources"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
+	requests "github.com/Digital-Voting-Team/menu-service/internal/service/requests/menu"
+	"github.com/Digital-Voting-Team/menu-service/resources"
 	"net/http"
 	"strconv"
 

@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	"github.com/Digital-Voting-Team/menu-service/internal/data"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
+	requests "github.com/Digital-Voting-Team/menu-service/internal/service/requests/meal_menu"
+	"github.com/Digital-Voting-Team/menu-service/resources"
 	"github.com/spf13/cast"
-	"menu-service/internal/data"
-	"menu-service/internal/service/helpers"
-	requests "menu-service/internal/service/requests/meal_menu"
-	"menu-service/resources"
 	"net/http"
 	"strconv"
 

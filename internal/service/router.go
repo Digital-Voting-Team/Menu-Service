@@ -1,17 +1,17 @@
 package service
 
 import (
+	"github.com/Digital-Voting-Team/menu-service/internal/data/pg"
+	category "github.com/Digital-Voting-Team/menu-service/internal/service/handlers/category"
+	meal "github.com/Digital-Voting-Team/menu-service/internal/service/handlers/meal"
+	mealMenu "github.com/Digital-Voting-Team/menu-service/internal/service/handlers/meal_menu"
+	menu "github.com/Digital-Voting-Team/menu-service/internal/service/handlers/menu"
+	receipt "github.com/Digital-Voting-Team/menu-service/internal/service/handlers/receipt"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/middleware"
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
-	"menu-service/internal/data/pg"
-	category "menu-service/internal/service/handlers/category"
-	meal "menu-service/internal/service/handlers/meal"
-	mealMenu "menu-service/internal/service/handlers/meal_menu"
-	menu "menu-service/internal/service/handlers/menu"
-	receipt "menu-service/internal/service/handlers/receipt"
-	"menu-service/internal/service/middleware"
 
-	"menu-service/internal/service/helpers"
+	"github.com/Digital-Voting-Team/menu-service/internal/service/helpers"
 )
 
 func (s *service) router() chi.Router {

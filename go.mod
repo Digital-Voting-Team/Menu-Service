@@ -1,4 +1,4 @@
-module menu-service
+module github.com/Digital-Voting-Team/menu-service
 
 go 1.19
 

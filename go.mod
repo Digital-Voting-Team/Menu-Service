@@ -3,8 +3,8 @@ module github.com/Digital-Voting-Team/menu-service
 go 1.19
 
 require (
-	github.com/Digital-Voting-Team/auth-serivce v1.1.0
-	github.com/Digital-Voting-Team/cafe-service v1.0.0
+	github.com/Digital-Voting-Team/auth-serivce v1.2.2
+	github.com/Digital-Voting-Team/cafe-service v1.0.2
 	github.com/Digital-Voting-Team/staff-service v1.0.7
 	github.com/Digital-Voting-Team/warehouse-service v1.0.0
 	github.com/Masterminds/squirrel v1.5.3

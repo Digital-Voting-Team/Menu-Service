@@ -19,6 +19,16 @@ func ParseCafeResponse(r *http.Response) (*cafeResources.CafeResponse, error) {
 	return &response, nil
 }
 
+func ParseIngredientResponse(r *http.Response) (*warehouseResources.IngredientResponse, error) {
+	var response warehouseResources.IngredientResponse
+
+	if err := json.NewDecoder(r.Body).Decode(&response); err != nil {
+		return &response, errors.Wrap(err, "failed to unmarshal IngredientResponse")
+	}
+
+	return &response, nil
+}
+
 func ValidateCafe(token, endpoint string, id int64) (*cafeResources.CafeResponse, error) {
 	req, err := http.NewRequest("GET", endpoint+strconv.FormatInt(id, 10), nil)
 	if err != nil {
@@ -31,16 +41,6 @@ func ValidateCafe(token, endpoint string, id int64) (*cafeResources.CafeResponse
 	}
 
 	return ParseCafeResponse(res)
-}
-
-func ParseIngredientResponse(r *http.Response) (*warehouseResources.IngredientResponse, error) {
-	var response warehouseResources.IngredientResponse
-
-	if err := json.NewDecoder(r.Body).Decode(&response); err != nil {
-		return &response, errors.Wrap(err, "failed to unmarshal WarehouseResponse")
-	}
-
-	return &response, nil
 }
 
 func ValidateIngredient(token, endpoint string, id int64) (*warehouseResources.IngredientResponse, error) {

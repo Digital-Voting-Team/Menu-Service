@@ -3,14 +3,14 @@ log:
   level: "info"
 
 db:
-#  url: "postgres://postgres:postgres@menu-db/postgres?sslmode=disable"
+  url: "postgres://postgres:postgres@menu-db/postgres?sslmode=disable"
 # Uncomment to use locally:
 #   url: "postgres://postgres:password@localhost:5432/Cafe?sslmode=disable"
-   url: "postgres://postgres:postgres@localhost:5435/postgres?sslmode=disable"
+#   url: "postgres://postgres:postgres@localhost:5435/postgres?sslmode=disable"
 
 # if docker false, the first entry point will be used, otherwise the second!!!
 endpoints:
-  docker: false
+  docker: true
   services:
     - service: "auth-service"
       entry_points:
